@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  PopViewController.swift
 //  test2
 //
 //  Created by 김종국 on 2019/10/24.
@@ -8,17 +8,19 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class PopViewController: UIViewController {
+    
+    var inputText = "cccc"
     var textField = UITextField()
-    var button = UIButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        view.backgroundColor = .yellow
         
         textField = UITextField()
         textField.backgroundColor = .gray
+        textField.text = inputText
         textField.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(textField)
         textField.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
@@ -26,7 +28,7 @@ class ViewController: UIViewController {
         textField.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         textField.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
         
-        button = UIButton(type: .system)
+        let button = UIButton(type: .system)
         button.setTitle("abc", for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.addTarget(self, action: #selector(button_onClick), for: .touchUpInside)
@@ -36,33 +38,21 @@ class ViewController: UIViewController {
         button.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         button.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
         
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(noticeGet), name: NSNotification.Name(rawValue: "b"), object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(logined), name: NSNotification.Name(rawValue: "c"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(noticeGet), name: NSNotification.Name(rawValue: "a"), object: nil)
     }
     
     @objc func button_onClick() {
         guard let text = textField.text else {
             return
         }
-////        print(text)
-////        button.setTitle(text, for: .normal)
-//
-//        let userInfo:[String:Any] = [
-//            "text" : text
-//        ]
-//
-//        let viewController = PopViewController()
-//        viewController.inputText = text
-//        present(viewController, animated: true, completion: nil)
-//        present(viewController, animated: true) {
-////            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "a"), object: nil)
-//            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "a"), object: nil, userInfo: userInfo)
-        
-        
-//        }
-        
-        login(id: text)
+        dismiss(animated: true) {
+
+            let userInfo:[String:Any] = [
+                "text" : text
+            ]
+            
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "b"), object: nil, userInfo: userInfo)
+        }
     }
 
     @objc func noticeGet(_ sender : NSNotification) {
@@ -73,18 +63,8 @@ class ViewController: UIViewController {
         
         textField.text = text
     }
-
     
-    @objc func logined(_ sender : NSNotification) {
-        //textField.text = "login complete"
-        
-        guard let text = textField.text else {
-            return
-        }
-        
-        let viewController = PopViewController()
-        viewController.inputText = text
-        present(viewController, animated: true, completion: nil)
-    }
+
+
 }
 

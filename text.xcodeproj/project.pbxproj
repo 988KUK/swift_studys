@@ -16,6 +16,8 @@
 		AC2FEE7123617A3D00B94182 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC2FEE6F23617A3D00B94182 /* LaunchScreen.storyboard */; };
 		AC2FEE7C23617A3D00B94182 /* textTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2FEE7B23617A3D00B94182 /* textTests.swift */; };
 		AC2FEE8723617A3D00B94182 /* textUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2FEE8623617A3D00B94182 /* textUITests.swift */; };
+		AC2FEE9523617A7A00B94182 /* PopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2FEE9423617A7A00B94182 /* PopViewController.swift */; };
+		AC2FEE9723617A8200B94182 /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2FEE9623617A8200B94182 /* Options.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		AC2FEE8223617A3D00B94182 /* textUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = textUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC2FEE8623617A3D00B94182 /* textUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = textUITests.swift; sourceTree = "<group>"; };
 		AC2FEE8823617A3D00B94182 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC2FEE9423617A7A00B94182 /* PopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopViewController.swift; sourceTree = "<group>"; };
+		AC2FEE9623617A8200B94182 /* Options.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Options.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,8 @@
 				AC2FEE6123617A3A00B94182 /* AppDelegate.swift */,
 				AC2FEE6323617A3A00B94182 /* SceneDelegate.swift */,
 				AC2FEE6523617A3A00B94182 /* ViewController.swift */,
+				AC2FEE9423617A7A00B94182 /* PopViewController.swift */,
+				AC2FEE9623617A8200B94182 /* Options.swift */,
 				AC2FEE6723617A3A00B94182 /* Main.storyboard */,
 				AC2FEE6D23617A3D00B94182 /* Assets.xcassets */,
 				AC2FEE6F23617A3D00B94182 /* LaunchScreen.storyboard */,
@@ -264,7 +270,9 @@
 			files = (
 				AC2FEE6623617A3A00B94182 /* ViewController.swift in Sources */,
 				AC2FEE6223617A3A00B94182 /* AppDelegate.swift in Sources */,
+				AC2FEE9523617A7A00B94182 /* PopViewController.swift in Sources */,
 				AC2FEE6C23617A3A00B94182 /* text.xcdatamodeld in Sources */,
+				AC2FEE9723617A8200B94182 /* Options.swift in Sources */,
 				AC2FEE6423617A3A00B94182 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -447,7 +455,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = kr.xoul.text;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -464,7 +472,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = kr.xoul.text;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
